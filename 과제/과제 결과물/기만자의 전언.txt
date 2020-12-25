@@ -1,0 +1,29 @@
+# 서버에 SSH로 접속
+# C:\Users\pc에서 실행
+ssh -i daesun-seoul-gpu.pem ubuntu@13.125.109.204
+
+# tar 사용법
+# 압축하는법
+tar czf <압축파일이름> <압축대상>
+# e.g.
+# tar czf homework.tar.gz homework
+
+# 트레이닝 세션 접속
+screen -dr 28437
+# 트레이닝 세션 나가기
+# <Ctrl-A> <Ctrl-D> 순서대로 누르기
+
+# 파일 복사: sftp
+sftp -i daesun-seoul-gpu.pem ubuntu@13.125.109.204
+# 서버->클라이언트
+get <파일명>
+# 클라이언트->서버
+put <파일명>
+# 원격지 파일 목록 받아오기
+ls
+
+# TensorFlow 환경 활성화하기
+source activate tensorflow_p36
+#그 다음에 명령어
+
+C:\SongDaeSun
